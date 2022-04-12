@@ -1,2 +1,2 @@
 # cloud-tools
-various tools to deploy Kontain into the cloud
+Tooling to deploy the Kontain experience in the cloud
