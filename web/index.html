@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Kontain Trial</title>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h2>{{ message }}</h2>
+
+            <button v-on:click="tryKontainBtnClick()">Try Kontain</button>
+            <p>{{ waitMessage }}</p>
+            <a v-bind:href = "userEnvLink" target = "_blank">{{ useEnvMessage }}</a>
+
+            <p>{{ info }}</p>
+        </div>
+        <script src="js/app.js"></script> 
+    </body>
+</html>

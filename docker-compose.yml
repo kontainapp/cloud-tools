@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+    client:
+        image: nginx:1.21.1-alpine
+        ports:
+            - 8000:80
+        volumes:
+            - ${PWD}/web:/usr/share/nginx/html
+            - ${PWD}/nginx/conf.d:/etc/nginx/conf.d
