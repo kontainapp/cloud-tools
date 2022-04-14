@@ -1,3 +1,5 @@
+# module for defining the main trial VM and eventually creating an AMI from it
+#----
 # # picks latest amazon-linux-2 AMI
 # data "aws_ami" "amazon-linux-2" {
 #   most_recent = true
@@ -50,18 +52,18 @@ variable "ktrial_public_subnet_id" {
   default = "subnet-0a1bf12338e68d60e"
 }
 
-#----
-resource "aws_key_pair" "ktrial_demo" {
-  key_name   = "ktrial"
-  public_key = "${file("~/.ssh/ktrial.pub")}"
+variable "ktrial_key_name" {
+  description = "Kontain Trial instance key"
+  default = "ktrial"
 }
 
+#----
 resource "aws_instance" "ktrial_instance1" {
 	ami = "${var.ami}" # fedora 34
 	instance_type = "${var.instance_type}"
 
   # key for accessing instance
-	key_name = "${aws_key_pair.ktrial_demo.key_name}"
+	key_name = "${var.ktrial_key_name}"
 
   # network related
   subnet_id = "${var.ktrial_public_subnet_id}" # aws_subnet.kontain_public_subnet.id

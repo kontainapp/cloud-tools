@@ -1,14 +1,4 @@
-# # picks latest amazon-linux-2 AMI
-# data "aws_ami" "amazon-linux-2" {
-#   most_recent = true
-#   owners      = ["amazon"]
-
-#   filter {
-#     name   = "name"
-#     values = ["amzn2-ami-hvm*"]
-#   }
-# }
-
+# module for defining VPC and subnet and security group for trial instances
 #----
 variable "region" {
     description = "Region for Kontain trial"
