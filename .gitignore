@@ -36,3 +36,21 @@ hs_err_pid*
 .vscode
 
 *.pem
+*.pub
+
+
+# golang
+# Binaries, plugins, libs
+bin/**
+bin/
+obj/
+packages
+*.dll
+*.dylib
+*.exe
+*.exe~
+*.so
+
+# Testing
+*.test
+*.tmp
