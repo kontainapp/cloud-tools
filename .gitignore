@@ -1,3 +1,6 @@
+# go files
+bin/
+
 # Compiled class file
 *.class
 
@@ -24,6 +27,9 @@ hs_err_pid*
 
 # terraform
 #  Local .terraform directories
+.terraform.lock.hcl
+.terraform
+
 **/.terraform/*
 
 # .tfstate files
